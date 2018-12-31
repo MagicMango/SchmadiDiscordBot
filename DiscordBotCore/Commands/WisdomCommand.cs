@@ -20,6 +20,7 @@ namespace DiscordBotCore.Commands
             var obj = JsonConvert.DeserializeObject<dynamic>(result);
             await ctx.RespondAsync(string.Format("Here is the Joke for {0}: {1}", ctx.User.Username, obj?.value?.joke));
         }
+
         [Command("weather"), Description("Get the weather for a specified city")]
         public async Task Weather(CommandContext ctx, [Description("Name of the city")] string cityname)
         {
@@ -28,6 +29,7 @@ namespace DiscordBotCore.Commands
             var obj = JsonConvert.DeserializeObject<dynamic>(result);
             await ctx.RespondAsync(string.Format("Here is the Weather for {0} requested from: {1}: {2}", cityname, ctx.User.Username, obj?.main));
         }
+
         [Command("joke"), Description("Get a randon joke")]
         public async Task Joke(CommandContext ctx)
         {
@@ -39,6 +41,7 @@ namespace DiscordBotCore.Commands
             var obj = JsonConvert.DeserializeObject<dynamic>(result);
             await ctx.RespondAsync(string.Format("Here is the Joke for {0}: {1}", ctx.User.Username, obj?.joke));
         }
+
         [Command("rule34"), Description("Get a randon Rule 34 pic")]
         public async Task Rule34(CommandContext ctx)
         {
@@ -46,6 +49,7 @@ namespace DiscordBotCore.Commands
             var result = GetFinalRedirect("https://rule34.xxx/index.php?page=post&s=random");
             await ctx.RespondAsync(string.Format("Here is your rule34 pic {0}: {1}", ctx.User.Username, result));
         }
+
         [Command("giphy"), Description("Get a randon Giphy pic")]
         public async Task Giphy(CommandContext ctx)
         {

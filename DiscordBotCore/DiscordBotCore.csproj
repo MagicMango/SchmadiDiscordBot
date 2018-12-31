@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\LoveCommands.cs" />
     <Compile Include="Commands\RandomCommands.cs" />
     <Compile Include="Commands\WisdomCommand.cs" />
     <Compile Include="Handler\ChannelHandler.cs" />
