@@ -8,12 +8,13 @@ using System.IO;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
+using DiscordBotCore;
 
 namespace DiscordBotCore.Commands
 {
-    public class RandomCommands
+    public class RandomCommands:IWillCommand
     {
-        [Command("WSix"), Description("Joins a voice channel.")]
+        [Command("wsix"), Description("Joins a voice channel.")]
         public async Task WSix(CommandContext ctx)
         {
             Random r = new Random();
