@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Reflection;
 using System.Threading.Tasks;
-using System.Linq;
 using DiscordBotCore.Commands;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
@@ -26,7 +24,7 @@ namespace DiscordBotCore.Handler
         {
             var cfg = new DiscordConfiguration
             {
-                Token = "NTI4MTg2MTEzNTA5MTYzMDEx.Dwe90A.5rScVz-Tz97vYrelQ6eal38hBnE",
+                Token = "NTI4OTQ3OTA1ODYwNDY4NzU1.DwuWdg.a-GCVQSzXXPkC-3vrkOjBJlNgtM",
                 TokenType = TokenType.Bot,
                 
                 AutoReconnect = true,
