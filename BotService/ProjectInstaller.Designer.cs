@@ -38,7 +38,8 @@
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.ServiceName = "BotService";
+            this.serviceInstaller1.ServiceName = "DiscordBotService";
+            this.serviceInstaller1.Description = "Discord bot with quite a lot functions";
             // 
             // ProjectInstaller
             // 
