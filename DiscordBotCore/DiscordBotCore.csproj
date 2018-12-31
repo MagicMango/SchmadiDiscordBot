@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\RandomCommands.cs" />
+    <Compile Include="Commands\WisdomCommand.cs" />
     <Compile Include="Handler\ChannelHandler.cs" />
     <Compile Include="Commands\VoiceCommands.cs" />
     <Compile Include="IWillCommand.cs" />

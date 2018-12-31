@@ -1,16 +1,14 @@
-﻿using System;
-using System.Threading.Tasks;
-using DiscordBotCore.Commands;
-using System.Linq;
-using DSharpPlus;
+﻿using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Exceptions;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
 using DSharpPlus.VoiceNext;
 using DSharpPlus.VoiceNext.Codec;
-using Newtonsoft.Json;
+using System;
+using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 
 namespace DiscordBotCore.Handler
 {
@@ -26,7 +24,7 @@ namespace DiscordBotCore.Handler
         {
             var cfg = new DiscordConfiguration
             {
-                Token = "NTI4OTQ3OTA1ODYwNDY4NzU1.DwugXA.u6savJfDNWlT0G4L3Sgt49aGquk",
+                Token = "NTI4MTg2MTEzNTA5MTYzMDEx.Dwunmw.OxR57_h9GiuXTew7TW9C4aekjIo",
                 TokenType = TokenType.Bot,
                 
                 AutoReconnect = true,
