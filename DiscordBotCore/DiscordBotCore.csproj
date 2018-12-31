@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Handler\ChannelHandler.cs" />
     <Compile Include="Commands\VoiceCommands.cs" />
+    <Compile Include="IWillCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

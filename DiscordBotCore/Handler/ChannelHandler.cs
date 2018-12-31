@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Reflection;
 using System.Threading.Tasks;
+using System.Linq;
 using DiscordBotCore.Commands;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
@@ -24,7 +26,7 @@ namespace DiscordBotCore.Handler
         {
             var cfg = new DiscordConfiguration
             {
-                Token = "[Token]",
+                Token = "NTI4MTg2MTEzNTA5MTYzMDEx.Dwe90A.5rScVz-Tz97vYrelQ6eal38hBnE",
                 TokenType = TokenType.Bot,
                 
                 AutoReconnect = true,
@@ -84,7 +86,13 @@ namespace DiscordBotCore.Handler
             this.Commands.CommandErrored += this.Commands_CommandErrored;
 
             // up next, let's register our commands
-            this.Commands.RegisterCommands<VoiceCommands>();
+            // but with Reflection \^^/
+            foreach (var item in Assembly.GetExecutingAssembly().GetTypes().Where(x=>x.GetInterfaces().Contains(typeof(IWillCommand))))
+            {
+                var methodtoInvoke = typeof(CommandsNextModule).GetMethod("RegisterCommands", Type.EmptyTypes);
+                var method = methodtoInvoke.MakeGenericMethod(item);
+                method.Invoke(this.Commands, null);
+            }
 
             // let's set up voice
             var vcfg = new VoiceNextConfiguration
