@@ -87,6 +87,7 @@ namespace DiscordBotCore.Handler
 
             // up next, let's register our commands
             // but with Reflection \^^/
+            //i added a comment
             foreach (var item in Assembly.GetExecutingAssembly().GetTypes().Where(x=>x.GetInterfaces().Contains(typeof(IWillCommand))))
             {
                 var methodtoInvoke = typeof(CommandsNextModule).GetMethod("RegisterCommands", Type.EmptyTypes);
