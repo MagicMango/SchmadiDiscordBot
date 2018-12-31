@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using DiscordBotCore.Commands;
 using DSharpPlus;
@@ -84,7 +86,13 @@ namespace DiscordBotCore.Handler
             this.Commands.CommandErrored += this.Commands_CommandErrored;
 
             // up next, let's register our commands
-            this.Commands.RegisterCommands<VoiceCommands>();
+            // but with Reflection \^^/
+            foreach (var item in Assembly.GetExecutingAssembly().GetTypes().Where(x => x.GetInterfaces().Contains(typeof(IWillCommand))))
+            {
+                var methodtoInvoke = typeof(CommandsNextModule).GetMethod("RegisterCommands", Type.EmptyTypes);
+                var method = methodtoInvoke.MakeGenericMethod(item);
+                method.Invoke(this.Commands, null);
+            }
 
             // let's set up voice
             var vcfg = new VoiceNextConfiguration
