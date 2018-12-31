@@ -31,7 +31,7 @@ using DSharpPlus.VoiceNext;
 
 namespace DiscordBotCore.Commands
 {
-    public class VoiceCommands
+    public class VoiceCommands: IWillCommand
     {
         [Command("join"), Description("Joins a voice channel.")]
         public async Task Join(CommandContext ctx, DiscordChannel chn = null)
