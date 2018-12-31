@@ -14,12 +14,16 @@ namespace DiscordBotCore.Commands
 {
     public class RandomCommands:IWillCommand
     {
-        [Command("wsix"), Description("Joins a voice channel.")]
-        public async Task WSix(CommandContext ctx)
+        [Command("dice"), Description("Roles Dice x times")]
+        public async Task Dice(CommandContext ctx, [Description("Side of dice.")] int sided, [Description("Number of dices")] int number)
         {
-            Random r = new Random();
-            int n = r.Next(1, 6);
-            await ctx.RespondAsync($"You roled: " + n);
+            for (int i = 0; i < number; i++)
+            {
+                Random r = new Random();
+                int W = r.Next(1, sided);
+                await ctx.RespondAsync($"You roled: " + W);
+            }
+            
         }
     }
 }
