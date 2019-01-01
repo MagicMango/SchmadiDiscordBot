@@ -151,6 +151,8 @@ namespace DiscordBotCore.Commands
                 var ffmpeg = Process.Start(ffmpeg_inf);
                 var ffout = ffmpeg.StandardOutput.BaseStream;
 
+
+                var size = new FileInfo(filename).Length;
                 // let's buffer ffmpeg output
                 using (var ms = new MemoryStream())
                 {

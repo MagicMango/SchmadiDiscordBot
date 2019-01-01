@@ -31,7 +31,7 @@
             // 
             // BotService
             // 
-            this.ServiceName = "Service1";
+            this.ServiceName = "DiscordBotService";
 
         }
 
