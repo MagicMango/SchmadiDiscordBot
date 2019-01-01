@@ -17,7 +17,7 @@ namespace DiscordBotCore.Commands
         [Command("chucknorris"), Description("Get a randon Cuck Norris joke")]
         public async Task ChuckNorris(CommandContext ctx)
         {
-            await ctx.RespondAsync(string.Format("Here is the Joke for {0}: {1}", ctx.User.Username, ApiController.GetChuckNorrisJoke()));
+            await ctx.RespondAsync(string.Format("Here is the Chuck Norris: Joke for {0}: {1}", ctx.User.Username, ApiController.GetChuckNorrisJoke()));
         }
 
         [Command("weather"), Description("Get the weather for a specified city")]
