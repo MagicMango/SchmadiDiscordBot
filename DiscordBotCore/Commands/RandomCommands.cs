@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
-using System.IO;
-using DSharpPlus.CommandsNext;
+﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
-using DSharpPlus.Entities;
-using DiscordBotCore;
+using System;
+using System.Threading.Tasks;
 
 namespace DiscordBotCore.Commands
 {
@@ -20,8 +13,8 @@ namespace DiscordBotCore.Commands
             for (int i = 0; i < number; i++)
             {
                 Random r = new Random();
-                int W = r.Next(1, sided);
-                await ctx.RespondAsync($"You roled: " + W);
+                int w = r.Next(1, sided);
+                await ctx.RespondAsync($"You roled: " + w);
             }
             
         }
