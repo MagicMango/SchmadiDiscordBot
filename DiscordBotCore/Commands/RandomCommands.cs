@@ -12,7 +12,7 @@ namespace DiscordBotCore.Commands
         {
             for (int i = 0; i < number; i++)
             {
-                Random r = new Random();
+                Random r = new Random(DateTime.Now.Millisecond);
                 int w = r.Next(1, sided);
                 await ctx.RespondAsync($"You roled: " + w);
             }
