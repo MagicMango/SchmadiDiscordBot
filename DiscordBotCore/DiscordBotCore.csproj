@@ -133,6 +133,8 @@
       <DependentUpon>DiscordBotModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorys\LovePhraseRepository.cs" />
+    <Compile Include="Repositorys\Repository.cs" />
     <Compile Include="Util\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>
