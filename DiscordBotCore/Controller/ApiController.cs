@@ -71,7 +71,7 @@ namespace DiscordBotCore.Controller
             });
             t.Wait();
             var obj = JsonConvert.DeserializeObject<dynamic>(result);
-            return (string)obj?.main;
+            return "T: " + (string)obj?.main?.temp + " P: " + (string)obj?.main?.pressure + " H: " + (string)obj?.main?.humidity + " T(max): " + (string)obj?.main?.temp_max + " T(min): " + (string)obj?.main?.temp_min;
         }
 
         public static string GetFinalRedirect(string url)

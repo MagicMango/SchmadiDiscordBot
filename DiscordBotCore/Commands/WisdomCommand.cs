@@ -1,12 +1,6 @@
 ﻿using DiscordBotCore.Controller;
-using DiscordBotCore.Util;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
-using Newtonsoft.Json;
-using System;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 
