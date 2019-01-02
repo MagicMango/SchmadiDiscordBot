@@ -27,5 +27,6 @@ namespace DiscordBotCore.Entities
     
         public virtual DbSet<LovePhrases> LovePhrases { get; set; }
         public virtual DbSet<PokeNames> PokeNames { get; set; }
+        public virtual DbSet<PokePointsUser> PokePointsUser { get; set; }
     }
 }

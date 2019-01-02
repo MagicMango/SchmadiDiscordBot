@@ -21,9 +21,18 @@
           <Property Name="NamesEnglish" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="Pics" Type="varchar" MaxLength="255" Nullable="false" />
         </EntityType>
+        <EntityType Name="PokePointsUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="varchar" MaxLength="255" />
+          <Property Name="Points" Type="int" />
+        </EntityType>
         <EntityContainer Name="DiscordBotModelStoreContainer">
           <EntitySet Name="LovePhrases" EntityType="Self.LovePhrases" Schema="DiscordBot" store:Type="Tables" />
           <EntitySet Name="PokeNames" EntityType="Self.PokeNames" Schema="DiscordBot" store:Type="Tables" />
+          <EntitySet Name="PokePointsUser" EntityType="Self.PokePointsUser" Schema="DiscordBot" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -39,6 +48,7 @@
         <EntityContainer Name="DiscordBotEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="LovePhrases" EntityType="Self.LovePhrases" />
           <EntitySet Name="PokeNames" EntityType="DiscordBotModel.PokeNames" />
+          <EntitySet Name="PokePointsUser" EntityType="DiscordBotModel.PokePointsUser" />
         </EntityContainer>
         <EntityType Name="PokeNames">
           <Key>
@@ -48,6 +58,14 @@
           <Property Name="NamesGerman" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="NamesEnglish" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="Pics" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PokePointsUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Points" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -70,6 +88,15 @@
                 <ScalarProperty Name="NamesEnglish" ColumnName="NamesEnglish" />
                 <ScalarProperty Name="NamesGerman" ColumnName="NamesGerman" />
                 <ScalarProperty Name="IDPokeNames" ColumnName="IDPokeNames" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PokePointsUser">
+            <EntityTypeMapping TypeName="DiscordBotModel.PokePointsUser">
+              <MappingFragment StoreEntitySet="PokePointsUser">
+                <ScalarProperty Name="Points" ColumnName="Points" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

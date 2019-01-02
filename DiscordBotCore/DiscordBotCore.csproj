@@ -112,6 +112,8 @@
     <Compile Include="Commands\RandomCommands.cs" />
     <Compile Include="Commands\WisdomCommand.cs" />
     <Compile Include="Controller\ApiController.cs" />
+    <Compile Include="Controller\PokeController.cs" />
+    <Compile Include="Controller\RandomController.cs" />
     <Compile Include="Entities\DiscordBotModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -128,6 +130,9 @@
       <DependentUpon>DiscordBotModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Entities\PokeNames.cs">
+      <DependentUpon>DiscordBotModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PokePointsUser.cs">
       <DependentUpon>DiscordBotModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Handler\ChannelHandler.cs" />
