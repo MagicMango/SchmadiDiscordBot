@@ -21,7 +21,7 @@ namespace DiscordBotCore.Controller
             });
             t.Wait();
             obj = JsonConvert.DeserializeObject<dynamic>(result);
-            return obj?.value?.joke as string;
+            return (string)obj?.value?.joke;
         }
 
         public static string GetRandomJoke()
@@ -37,7 +37,7 @@ namespace DiscordBotCore.Controller
             });
             t.Wait();
             var obj = JsonConvert.DeserializeObject<dynamic>(result);
-            return obj?.joke as string;
+            return (string)obj?.joke;
         }
 
         public static string GetRandomGiphyPic()
@@ -53,7 +53,7 @@ namespace DiscordBotCore.Controller
             });
             t.Wait();
             var obj = JsonConvert.DeserializeObject<dynamic>(result);
-            return obj?.data?.image_original_url as string;
+            return (string)obj?.data?.image_original_url;
         }
 
         public static string GetRandomRule34Link()
@@ -71,7 +71,7 @@ namespace DiscordBotCore.Controller
             });
             t.Wait();
             var obj = JsonConvert.DeserializeObject<dynamic>(result);
-            return obj?.main as string;
+            return "T: " + (string)obj?.main?.temp + " P: " + (string)obj?.main?.pressure + " H: " + (string)obj?.main?.humidity + " T(max): " + (string)obj?.main?.temp_max + " T(min): " + (string)obj?.main?.temp_min;
         }
 
         public static string GetFinalRedirect(string url)

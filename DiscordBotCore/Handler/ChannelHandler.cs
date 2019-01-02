@@ -82,7 +82,7 @@ namespace DiscordBotCore.Handler
             // going on
             this.Commands.CommandExecuted += this.Commands_CommandExecuted;
             this.Commands.CommandErrored += this.Commands_CommandErrored;
-
+            this.Client.MessageCreated += this.Handle_Message;
             // up next, let's register our commands
             // but with Reflection \^^/
             //i added a comment
@@ -110,6 +110,12 @@ namespace DiscordBotCore.Handler
 
             // and this is to prevent premature quitting
             await Task.Delay(-1);
+        }
+
+        private Task Handle_Message(MessageCreateEventArgs e)
+        {
+            e.Client.DebugLogger.LogMessage(LogLevel.Info, e.Message.Author.Username+" in "+e.Message.Channel.Name, e.Message.Content, DateTime.Now);
+            return Task.CompletedTask;
         }
 
         private Task Client_Ready(ReadyEventArgs e)
