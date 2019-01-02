@@ -132,6 +132,9 @@
     <Compile Include="Entities\PokeNames.cs">
       <DependentUpon>DiscordBotModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\PokePointsUser.cs">
+      <DependentUpon>DiscordBotModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Handler\ChannelHandler.cs" />
     <Compile Include="Commands\VoiceCommands.cs" />
     <Compile Include="IWillCommand.cs" />

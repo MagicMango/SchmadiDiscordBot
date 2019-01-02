@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace DiscordBotCore.Controller
 {
-    class PokeController
+    public static class PokeController
     {
+       
     }
 }
