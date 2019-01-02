@@ -10,6 +10,7 @@ namespace DiscordBotCore.Controller
 {
     public static class ApiController
     {
+
         public static string GetChuckNorrisJoke()
         {
             HttpClient client = new HttpClient();
