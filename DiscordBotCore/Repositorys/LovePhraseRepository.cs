@@ -19,7 +19,7 @@ namespace DiscordBotCore.Repositorys
         {
             Random r = new Random(DateTime.Now.Millisecond);
             var rn = r.Next(0, GetLovePhrasesCount() - 1);
-            return context.LovePhrases.Select(x => x.Phrase).ToArray()[rn];
+            return GetAllLovePhrases()[rn];
         }
     }
 }

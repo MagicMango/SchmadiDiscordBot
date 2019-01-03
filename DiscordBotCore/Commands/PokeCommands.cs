@@ -12,9 +12,9 @@ namespace DiscordBotCore.Commands
 {
     public class PokeCommands : IWillCommand
     {
-        [Command("poke"), Description("Guess that Pokemon!")]
+        [Command("poke"), Description("Guess a random Pokemon!")]
         public async Task poke(CommandContext ctx) {
-
+            await ctx.RespondAsync(string.Format("Guess that Pokémon: "));
         }
     }
 }
