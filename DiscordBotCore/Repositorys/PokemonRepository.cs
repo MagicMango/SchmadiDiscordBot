@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DiscordBotCore.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,18 @@ namespace DiscordBotCore.Repositorys
             Random r = new Random(DateTime.Now.Millisecond);
             var rndm = r.Next(0, GetAllPokemonCount() - 1);
             return GetAllPokemon()[rndm];
+        }
+       
+
+        public PokeNames GetPokemonByID(int Id) {
+            return context.PokeNames.Find(Id);
+        }
+
+        public int GetIDFromName(string pokename) {
+            return context.PokeNames
+                .Where(x => x.NamesGerman.Equals(pokename) || x.NamesEnglish.Equals(pokename))
+                .Select(y => y.IDPokeNames)
+                .FirstOrDefault();
         }
     }
 }
