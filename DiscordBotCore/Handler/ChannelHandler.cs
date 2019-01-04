@@ -24,7 +24,7 @@ namespace DiscordBotCore.Handler
         {
             var cfg = new DiscordConfiguration
             {
-                Token = "NTI4MTg2MTEzNTA5MTYzMDEx.Dwunmw.OxR57_h9GiuXTew7TW9C4aekjIo",
+                Token = "NTI4OTQ3OTA1ODYwNDY4NzU1.DxEuvw.B9u9nu-pNC5G3xrqgcXfbPIeg9E",
                 TokenType = TokenType.Bot,
                 
                 AutoReconnect = true,

@@ -7,7 +7,7 @@
       <Diagram DiagramId="f49b909b99304e4c8cc82cfd5c609ab8" Name="Diagram1">
         <EntityTypeShape EntityType="DiscordBotModel.LovePhrases" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DiscordBotModel.PokeNames" Width="1.5" PointX="3.375" PointY="0.75" />
-        <EntityTypeShape EntityType="DiscordBotModel.PokePointsUser" Width="1.5" PointX="7.125" PointY="2.875" />
+        <EntityTypeShape EntityType="DiscordBotModel.PokePointsUser" Width="1.5" PointX="6.25" PointY="1.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
