@@ -18,5 +18,6 @@ namespace DiscordBotCore.Entities
         public string NamesGerman { get; set; }
         public string NamesEnglish { get; set; }
         public string Pics { get; set; }
+        public string ShadowPics { get; set; }
     }
 }

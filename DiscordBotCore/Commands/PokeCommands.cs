@@ -25,7 +25,7 @@ namespace DiscordBotCore.Commands
                 await ctx.RespondAsync(string.Format("Guess that Pokémon: "));
                 int pokeid = PokeController.GetRandomPokemonID();
                 PokeController.SaveIDToFile(pokeid);
-                await ctx.RespondWithFileAsync(PokeController.GetFileStream(pokeid));
+                await ctx.RespondWithFileAsync(PokeController.GetPokeFile(pokeid, false));
             }
 
         }
@@ -42,6 +42,7 @@ namespace DiscordBotCore.Commands
                 if (PokeController.IsNameRight(pokename))
                 {
                     await ctx.RespondAsync(string.Format("You {0} guessed right!", ctx.Member.Username));
+                    await ctx.RespondWithFileAsync(PokeController.GetPokeFile(PokeController.GetIDFromFile(), true));
                     PokeController.EndGame();
                 }
                 else {
