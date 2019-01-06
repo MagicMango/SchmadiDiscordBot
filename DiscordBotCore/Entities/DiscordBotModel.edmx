@@ -20,6 +20,7 @@
           <Property Name="NamesGerman" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="NamesEnglish" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="Pics" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ShadowPics" Type="varchar" MaxLength="255" Nullable="false" />
         </EntityType>
         <EntityType Name="PokePointsUser">
           <Key>
@@ -58,6 +59,7 @@
           <Property Name="NamesGerman" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="NamesEnglish" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="Pics" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ShadowPics" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="PokePointsUser">
           <Key>
@@ -84,6 +86,7 @@
           <EntitySetMapping Name="PokeNames">
             <EntityTypeMapping TypeName="DiscordBotModel.PokeNames">
               <MappingFragment StoreEntitySet="PokeNames">
+                <ScalarProperty Name="ShadowPics" ColumnName="ShadowPics" />
                 <ScalarProperty Name="Pics" ColumnName="Pics" />
                 <ScalarProperty Name="NamesEnglish" ColumnName="NamesEnglish" />
                 <ScalarProperty Name="NamesGerman" ColumnName="NamesGerman" />

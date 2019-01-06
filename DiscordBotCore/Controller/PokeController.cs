@@ -11,11 +11,12 @@ namespace DiscordBotCore.Controller
 {
     public static class PokeController
     {
-        public static string GetFileStream(int PokeID)
+        public static string GetPokeFile(int PokeID, bool PokeRevealed)
         {
             using (PokemonRepository repos = new PokemonRepository())
             {
-                return AppDomain.CurrentDomain.BaseDirectory + @"App_Data" + repos.GetPokemonByID(PokeID).Pics;
+                if(PokeRevealed) return AppDomain.CurrentDomain.BaseDirectory + @"App_Data" + repos.GetPokemonByID(PokeID).Pics;
+                return AppDomain.CurrentDomain.BaseDirectory + @"App_Data" + repos.GetPokemonByID(PokeID).ShadowPics;
             }
         }
 
